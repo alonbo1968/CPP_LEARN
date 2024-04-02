@@ -22,7 +22,6 @@ int main()
     cout << "First dog License is " << dog1.getLicenseNumber() << '\n';
     cout << "Second dog name is " << dog2.getName() << '\n';
     cout << "Second dog License is " << dog2.getLicenseNumber() << '\n';
-
     return 0;
 }
 
