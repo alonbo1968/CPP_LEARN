@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <iomanip> //Formating libraries
+//#include <string> //Formating libraries
 
 int main()
 {
@@ -11,7 +12,12 @@ int main()
     cout << "Hello World!"<<endl;
     cout << "Hello World 2!\n";
     cout << "Hello World 3!\n";
-    cout << "Hello 4!"<<setw(20)<<"Hello 5!"<<setw(10)<<"Hello 6!\n";
+    cout << "Hello 4!"<<setw(10)<<"Hello 5!"<<setw(30)<<"Hello 6!\n";
+
+    std::string out_string = "\nBye Bye\n";
+    
+    cout << out_string << " string length is: " << out_string.length() << " bytes \n";
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
