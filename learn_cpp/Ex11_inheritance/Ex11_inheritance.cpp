@@ -5,6 +5,8 @@ using namespace std;
 
 
 class Animal {
+private:
+    int color;
 protected:
     string gender;
     int age;
@@ -31,7 +33,7 @@ public:
 
 int main()
 {
-    cout << "Create Dog object, inherited from Animal Animal class\n";
+    cout << "Create Dog object, inherited from Animal class\n";
     Dog buddy("male", 8, "Husky");
     cout << "Execute Dog member functions:\n";
     buddy.details();

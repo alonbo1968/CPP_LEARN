@@ -7,21 +7,21 @@ using namespace std;
 class Animal {
 public:
     void action() {
-        cout << "Animals have different properties: \n";
+        cout << "-action() method output: Animals have different properties: \n";
     }
 };
 
 class Fish :public Animal{
 public:
     void action() {
-        cout << " Fish Swims. \n";
+        cout << "-action() method output: Fish Swims. \n";
     }
 };
 
 class Bird :public Animal {
 public:
     void action() {
-        cout << " Bird Flies. \n";
+        cout << "-action() method output: Bird Flies. \n";
     }
 };
 
@@ -31,6 +31,7 @@ int main()
     Fish new_fish;
     Bird new_bird;
 
+    cout << "Polymorphism allows a derived class to override methods inherited from its base class:\n";
     new_animal.action();
     new_fish.action();
     new_bird.action();
