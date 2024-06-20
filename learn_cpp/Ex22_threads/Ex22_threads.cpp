@@ -32,7 +32,7 @@ void refreshForecast(map <string, int>  forecastUpdate) {
 int main()
 {
 /*  
-    cout << "First threads example: Creat two threads using the same function" << endl;
+    cout << "First threads example: Creat two threads using the same function with a parameter" << endl;
     int param1 = 1;
     int param2 = 2;
     std::cout << "*** Demonstrate threads creation ***\n";
