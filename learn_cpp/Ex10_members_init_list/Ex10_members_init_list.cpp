@@ -23,8 +23,10 @@ public:
 
 int main()
 {
-    cout << "Initilize const members and references using Members initializer list:\n";
-    Book book1;
-    book1.show();
+    {
+        cout << "Initilize const members and references using Members initializer list:\n";
+        Book book1;
+        book1.show();
+    } //Object is out of scope now
 
 }

@@ -7,6 +7,7 @@
 using namespace std;
 
 vector < int > primes = { 2, 3, 5, 7, 11 };
+vector < int > primes2 = (7);
 
 void print_vector(int vec[]) {
     for (int i = 0; i < primes.size(); i++) {

@@ -1,15 +1,8 @@
 I am trying to add 1st text line!
 I am trying to add 2nd text line!
-I am trying to add 1st text line!
-I am trying to add 2nd text line!
-I am trying to add 1st text line!
-I am trying to add 2nd text line!
-I am trying to add 1st text line!
-I am trying to add 2nd text line!
-I am trying to add 1st text line!
-I am trying to add 2nd text line!
-I am trying to add 1st text line!
-I am trying to add 2nd text line!
+This line is added manualy.
+Bye bye.
+
 I am trying to add 1st text line!
 I am trying to add 2nd text line!
 I am trying to add 1st text line!

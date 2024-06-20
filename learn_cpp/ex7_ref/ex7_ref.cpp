@@ -24,9 +24,10 @@ int main()
     std::cout << "a after ref_to_a is increments is " << a << '\n';
 
     std::cout << "\nPass by reference function variables:\n";
-    std::cout << "Before swaping: a = " << a << ", b = " << b << '\n';
+    std::cout << "Before swapping: a = " << a << ", b = " << b << '\n';
     swap(a, b);
-    std::cout << "After swaping: a = " << a << ", b = " << b << '\n';
-
+    std::cout << "After swapping: a = " << a << ", b = " << b << '\n';
+    swap(ref_to_a, b);//First parameter may be either 'a' or "ref_to_a"
+    std::cout << "After swapping back: a = " << a << ", b = " << b << '\n';
 }
 

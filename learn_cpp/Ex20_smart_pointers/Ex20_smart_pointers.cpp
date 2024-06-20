@@ -14,13 +14,22 @@ public:
     ~MyClass() {
         cout << "Destructor called" << endl;
     }
+
+    void print() {
+        cout << "Hello!" << endl << endl;
+    }
 };
 
 
 
 int main()
 {
-    cout << "*** 1. Smart Pointers demo - unnique pointers: ***" << endl;
+    cout << "Regular new/delete:" << endl;
+    MyClass* pointer_class = new(MyClass);
+    pointer_class->print();
+    delete pointer_class;
+
+    cout << "*** 1. Smart Pointers demo - unique pointers: ***" << endl;
     cout << "Smart Pointers to int demo:" << endl;
     unique_ptr<int>unPtr1 = make_unique <int>(25);//unPtr1 is an int unique smart pointer, holdind address of make_unique
     cout << "Address of make_unique smart pointer is " << unPtr1 << endl;
@@ -31,7 +40,7 @@ int main()
     cout << "*unPtr2 = " << *unPtr2 << endl;
     cout << "unPtr1 becomed NULL: unPtr1= " << unPtr1 << endl;
 
-    cout << "Smart Pointers to object demo:" << endl;
+    cout << "\nSmart Pointers to object demo:" << endl;
     {
         unique_ptr<MyClass>unPtr3 = make_unique<MyClass>();
         cout << "If the destructor is called, it means that the allocated memory were released!" << endl;
@@ -40,7 +49,7 @@ int main()
     cout << "\n*** 2. Smart Pointers demo - shared pointers: ***" << endl;
     {
         shared_ptr<MyClass>shPtr1 = make_shared<MyClass>();
-        cout << "Number of owners (Shared count) is : " << shPtr1.use_count() << endl;
+        cout << "Number of owners (Shared count) is: " << shPtr1.use_count() << endl;
         cout << "Assign another shared pointer: " << endl;
         {
             shared_ptr<MyClass>shPtr2 = shPtr1;
@@ -55,6 +64,9 @@ int main()
         shared_ptr<int>shPtr2 = make_shared<int>(25);
         wePtr1 = shPtr2;
     }
+
+
+
 
 
 
