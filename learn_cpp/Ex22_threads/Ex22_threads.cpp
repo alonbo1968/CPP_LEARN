@@ -5,7 +5,7 @@
 #include <thread>
 #include <map>
 #include <string>
-#include<chrono>
+#include <chrono>
 
 using namespace std;
 using namespace std::chrono_literals; //For the time literals like ms (mili second)
@@ -21,7 +21,7 @@ void common_func(int a) {
 void refreshForecast(map <string, int>  forecastUpdate) {
     while (1) {
         cout << endl;
-        for (auto& item: forecastUpdate) { //"item must be a reference ('&', otherwise the original ekement would not be updated!
+        for (auto& item: forecastUpdate) { //"item must be a reference ('&', otherwise the original element would not be updated!
             item.second++;
             cout << "Temp.in " << item.first << " is " << item.second << endl;
         }

@@ -31,7 +31,7 @@ int main()
 
     cout << "*** 1. Smart Pointers demo - unique pointers: ***" << endl;
     cout << "Smart Pointers to int demo:" << endl;
-    unique_ptr<int>unPtr1 = make_unique <int>(25);//unPtr1 is an int unique smart pointer, holdind address of make_unique
+    unique_ptr<int>unPtr1 = make_unique <int>(25);//unPtr1 is an int unique smart pointer, holding address of make_unique
     cout << "Address of make_unique smart pointer is " << unPtr1 << endl;
     cout << "Contents of make_unique smart pointer is " << *unPtr1 << endl;
 

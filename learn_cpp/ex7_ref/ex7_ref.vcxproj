@@ -24,6 +24,7 @@
     <ProjectGuid>{2dcf1aa1-b6d0-4b84-bd94-fef5f39315ac}</ProjectGuid>
     <RootNamespace>ex7ref</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>ex7_references</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

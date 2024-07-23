@@ -1,6 +1,7 @@
 // Ex24_exceptions.cpp : Exceptions demo
 //
 #include <iostream>
+#include "header.h"
 
 const int CHARS_PER_PAGE = 10;
 

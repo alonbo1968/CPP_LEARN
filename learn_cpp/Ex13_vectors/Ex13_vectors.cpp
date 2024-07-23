@@ -7,7 +7,7 @@
 using namespace std;
 
 vector < int > primes = { 2, 3, 5, 7, 11 };
-vector < int > primes2 = (7);
+vector < int > primes2 = { 7 };
 
 void print_vector(int vec[]) {
     for (int i = 0; i < primes.size(); i++) {
@@ -30,7 +30,7 @@ int main()
     cout << "\nPrint front and rear elements:\n";
     cout << primes.front() << '\n';
     cout << primes.back() << '\n';
-    print_vector(&primes[0]);
+    //print_vector(&primes[0]);
 
     cout << "\nAdd two elements to the back of the vector:\n";
     primes.push_back(13);

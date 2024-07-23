@@ -18,7 +18,7 @@ public:
 };
 
 
-template<typename T, int length> //T is a Type parameter, length is a regulat type name
+template<typename T, int length> //T is a Type parameter, length is a regular type name
 class Array {
 public:
 

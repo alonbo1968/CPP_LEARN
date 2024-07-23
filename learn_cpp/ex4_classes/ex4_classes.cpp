@@ -47,7 +47,7 @@ using namespace std;
 	}
 	void Student::print()
 	{
-		cout<<name<<"  "<< id<<"  "<<gradDate<<"\n\n";
+		cout<< name << "  " << id << "  " << gradDate << "\n\n";
 	}
 
 

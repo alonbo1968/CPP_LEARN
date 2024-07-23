@@ -27,6 +27,7 @@ int main()
         cout << "Error opening the file for writing\n";
     }
 
+    /* Print the file line by line */
     myfile_i.open("test.txt");
     if (myfile_i.is_open())
     {
