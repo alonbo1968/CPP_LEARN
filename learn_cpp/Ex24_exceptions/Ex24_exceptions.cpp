@@ -21,11 +21,11 @@ public:
         pages_to_print = (data_to_print.size() / CHARS_PER_PAGE) + 1;
 
         if (pages_to_print > num_of_papers) {
-            //throw "No Paper!";  //Char Exception
-            throw 101;         //int Exception
+            //throw "No Paper!";  //Uncomment to catch the string message exception
+            throw 101;         //Uncomment to catch the int exception
         }
         
-        cout << data_to_print << endl;
+        cout << "Printing... " << data_to_print << endl;
         num_of_papers -= pages_to_print; //Update the remaining number of papers in the printer
     }
 };
@@ -43,11 +43,8 @@ int main()
     catch (const char* txtException) {
         cout << "Exception: " << txtException << endl;
     }
-    catch (int codeException) { //
-        cout << "Exception code: " << codeException << endl;
-    }
-    catch (...) { //Default Exception 
-        cout << "Un-recognized exception" << endl;
+    catch (...) { //Default exception handler. Always place as the last handler
+        cout << "UN-RECOGNIZED EXCEPTION" << endl;
     }
 
     return 0;

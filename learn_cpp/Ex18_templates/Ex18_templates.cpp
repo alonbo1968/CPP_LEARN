@@ -28,21 +28,21 @@ int main()
 
     cout << "*** myMax Template function ***" << endl;
     int a = 5, b = 7;
-    cout << "Input is " << a << " and " << b << ". Max is " << myMax(a, b) << '\n';
+    cout << "Input is int " << a << " and int " << b << ". Max is " << myMax(a, b) << '\n';
 
     double x = 5.896F, y = 5.895F;
-    cout << "Input is " << x << " and " << y << ". Max is " << myMax(x, y) << '\n';
+    cout << "Input is double" << x << " and double" << y << ". Max is " << myMax(x, y) << '\n';
 
     cout << "\n*** myMult Template function ***" << endl;
     int c = 5, d = 6;
-    cout << "Input is " << c << " and " << d << ". Multiplication is is " << myMult(c, d) << '\n';
+    cout << "Input is int " << c << " and int " << d << ". Multiplication is " << myMult(c, d) << '\n';
 
     double e = 5.33F, f = 5.55F;
-    cout << "Input is " << e << " and " << f << ". Multiplication is is " << myMult(e, f) << '\n';
+    cout << "Input is " << e << " and " << f << ". Multiplication is " << myMult(e, f) << '\n';
 
-    float e1 = 7005.009F;
-    double f1 = 1025.5879;
-    cout << "Input is " << e1 << " and " << f1 << ". Multiplication is is " << myMult1(e1, f1) << '\n';
+    float f1 = 7005.009F;
+    double d1 = 1025.5879;
+    cout << "Input is float " << f1 << " and double " << f1 << ". Multiplication is double " << myMult1(f1, d1) << '\n';
 
     return 0;
 }
