@@ -1,21 +1,15 @@
 // Ex22_threads.cpp : C++ Threads
 //
-
 #include <iostream>
 #include <thread>
-#include <map>
-#include <string>
-#include <chrono>
 
 using namespace std;
-using namespace std::chrono_literals; //For the time literals like ms (mili second)
 
 void common_func(int a) {
     for (int i = 0; i < 2000; i++) {
         cout << a;
     }
 }
-
 
 int main()
 {

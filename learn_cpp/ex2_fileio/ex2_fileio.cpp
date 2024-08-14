@@ -11,7 +11,7 @@ int main()
 {
     ofstream myfile_o;
     ifstream myfile_i;
-    fstream myfile;
+    //fstream myfile;
     string line;
 
     myfile_o.open("test.txt", ios::app); //Open the file in "append" mode
