@@ -36,8 +36,7 @@ int main()
     //Do the same, this time dynamicly allocate object memory
     Base *base2 = new Derived;
     base2->print();
-    //delete base2;
-
+    delete base2;
 
     return 0;
 }
