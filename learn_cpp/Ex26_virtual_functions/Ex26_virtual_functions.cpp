@@ -1,20 +1,38 @@
-// Ex26_virtual_functions.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Ex26_virtual_functions.cpp : Virtual Functions demonstration
 //
 
 #include <iostream>
+using namespace std;
+
+
+class Base {
+public:
+    //virtual function
+    virtual void print() {
+        cout << "Base function!\n";
+    }
+};
+
+class Derived : public Base {
+public:
+    //this function overrides the virtual function in the base class
+    void print() override {
+        cout << "Derived function!\n";
+    }
+
+};
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    cout << "*** Virtual function Demo***" << endl;
+
+    Derived derived1;
+    // pointer of Base type that points to derived1
+    Base* base1 = &derived1;
+    //print() function of derived class will be executed
+    base1->print();
+
+    return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
