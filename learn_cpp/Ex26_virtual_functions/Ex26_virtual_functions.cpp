@@ -33,6 +33,12 @@ int main()
     //print() function of derived class will be executed
     base1->print();
 
+    //Do the same, this time dynamicly allocate object memory
+    Base *base2 = new Derived;
+    base2->print();
+    //delete base2;
+
+
     return 0;
 }
 
