@@ -12,7 +12,9 @@ protected:
     int age;
 public:
     Animal(string new_gender, int new_age)
-        : gender(new_gender), age(new_age) {};//member Initializer List
+        : gender(new_gender), age(new_age) {
+        cout << "Animal constructor.\n";
+    };//member Initializer List
 };
 
 class Dog :public Animal {
@@ -20,7 +22,9 @@ class Dog :public Animal {
 
 public:
     Dog(string new_gender, int new_age, string new_breed)  //Constructor, using Animal inherited constructor
-        : Animal(new_gender, new_age), breed(new_breed) {}
+        : Animal(new_gender, new_age), breed(new_breed) {
+        cout << "Dog constructor.\n";
+    }
 
     void sound() {
         cout << " Woof\n";
