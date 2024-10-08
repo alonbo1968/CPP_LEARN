@@ -2,7 +2,7 @@
 //
 
 #include <iostream>
-#include <memory>
+#include <memory> //Added for using smart pointers
 using namespace std;
 
 class MyClass {
@@ -49,26 +49,26 @@ int main()
     cout << "\n*** 2. Smart Pointers demo - shared pointers: ***" << endl;
     {
         shared_ptr<MyClass>shPtr1 = make_shared<MyClass>();
-        cout << "Number of owners (Shared count) is: " << shPtr1.use_count() << endl;
-        cout << "Assign another shared pointer: " << endl;
+        cout << "Number of owners (Shared/Reference count) is: " << shPtr1.use_count() << endl;
         {
+            cout << "Start a new scope" << endl;
+            cout << "Assign another shared pointer: " << endl;
             shared_ptr<MyClass>shPtr2 = shPtr1;
-            cout << "Number of owners (Shared count) is: " << shPtr1.use_count() << endl;
+            cout << "Number of owners (Shared/Reference count) is: " << shPtr1.use_count() << endl;
+            cout << "End the new scope" << endl;
         }
         cout << "Number of owners (Shared count) is: " << shPtr1.use_count() << endl;
     }
 
     cout << "\n*** 3. Smart Pointers demo - weak pointers: ***" << endl;
+    cout << "\n    Weak pointers has no reference count." << endl;
+    cout << "\n    Weak pointers helps dealing with  Dangling Pointers." << endl;
     weak_ptr<int>wePtr1;
     {
         shared_ptr<int>shPtr2 = make_shared<int>(25);
         wePtr1 = shPtr2;
     }
 
-
-
-
-
-
-    return 0;
+    system("pause>nul");
+    //return 0;
 }
