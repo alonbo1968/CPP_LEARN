@@ -1,4 +1,4 @@
-// ex3_pointers.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// ex3_pointers.cpp : Function pointers
 //
 
 #include <iostream>
@@ -8,6 +8,7 @@ using namespace std;
 
 int main()
 {
+    cout << " 1. Regular Pointers \n";
     int a = 153;
     int *pa;
     cout << "a = " << a << '\n';
@@ -15,16 +16,30 @@ int main()
     pa = &a;
     cout << "a = " << *pa << '\n';
     cout << "Address of a = " << pa << '\n';
+
+    cout << "\n 2. Pointers to dynamic memory \n";
+    cout << "Dynamicly allocate memory using \'new\' keyword \n";
+    int *array = new int[100];
+    for (int i = 0; i <100; i++) {
+        array[i] = 0;
+    }
+
+    int* p_array = array;
+    cout << "Pointer address: " << p_array << '\n';
+    cout << "Pointer first element: " << *p_array << '\n';
+    cout << "Create a second pointer:" << '\n';
+    int* p2 = p_array;
+    cout << "Second pointer: " << *p2 << '\n';
+
+    cout << "De-allocate memory using \"delete\" keyword. Note the \"[]\" after delete keyword: \n";
+    delete[] array;
+
+
+
+
+
+
+
     return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
