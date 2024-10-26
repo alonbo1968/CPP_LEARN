@@ -44,5 +44,6 @@ int main()
     double d1 = 1025.5879;
     cout << "Input is float " << f1 << " and double " << f1 << ". Multiplication is double " << myMult1(f1, d1) << '\n';
 
+    cout << endl << "Comment: Function Templates used by multiple source files, have to be defined in a header file!" << endl;
     return 0;
 }
