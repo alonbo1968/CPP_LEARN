@@ -67,6 +67,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex9a_constructor_delegation
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex29_pass_by_ref", "Ex29_pass_by_ref\Ex29_pass_by_ref.vcxproj", "{6B153307-41A1-4D03-A50C-6D896F7E7BC2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex30_copy_constructor", "Ex30_copy_constructor\Ex30_copy_constructor.vcxproj", "{B35AC31F-4AE2-4C93-AC54-0371264C94F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -331,6 +333,14 @@ Global
 		{6B153307-41A1-4D03-A50C-6D896F7E7BC2}.Release|x64.Build.0 = Release|x64
 		{6B153307-41A1-4D03-A50C-6D896F7E7BC2}.Release|x86.ActiveCfg = Release|Win32
 		{6B153307-41A1-4D03-A50C-6D896F7E7BC2}.Release|x86.Build.0 = Release|Win32
+		{B35AC31F-4AE2-4C93-AC54-0371264C94F8}.Debug|x64.ActiveCfg = Debug|x64
+		{B35AC31F-4AE2-4C93-AC54-0371264C94F8}.Debug|x64.Build.0 = Debug|x64
+		{B35AC31F-4AE2-4C93-AC54-0371264C94F8}.Debug|x86.ActiveCfg = Debug|Win32
+		{B35AC31F-4AE2-4C93-AC54-0371264C94F8}.Debug|x86.Build.0 = Debug|Win32
+		{B35AC31F-4AE2-4C93-AC54-0371264C94F8}.Release|x64.ActiveCfg = Release|x64
+		{B35AC31F-4AE2-4C93-AC54-0371264C94F8}.Release|x64.Build.0 = Release|x64
+		{B35AC31F-4AE2-4C93-AC54-0371264C94F8}.Release|x86.ActiveCfg = Release|Win32
+		{B35AC31F-4AE2-4C93-AC54-0371264C94F8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
