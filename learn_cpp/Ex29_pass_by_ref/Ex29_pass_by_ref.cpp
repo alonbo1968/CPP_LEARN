@@ -56,8 +56,8 @@ int main()
     std::cout << "AFTER increment:" << std::endl;
     main_counters.show();
     std::cout << "Passing an object by VALUE genertates a SHALLOW COPY. " << std::endl;
-    std::cout << "This is bad if the Object has Dynamic <emory Allocation." << std::endl;
-    std::cout << "So passing the Object as a Refernce is important." << std::endl;
+    std::cout << "This is bad if the Object has Dynamic Memory Allocation." << std::endl;
+    std::cout << "So passing the Object as a Refernce creates DEEP COPY." << std::endl;
     return 0;
 }
 

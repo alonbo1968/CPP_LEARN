@@ -22,8 +22,8 @@ void refreshForecast(map <string, int>  forecastUpdate) {
     while (1) {
         cout << endl;
         for (auto& item: forecastUpdate) { //"item must be a reference ('&', otherwise the original element would not be updated!
-            item.second++;
-            cout << "Temp.in " << item.first << " is " << item.second << endl;
+            item.second++; //Increse temperature in this location
+            cout << "Temp.in " << item.first << " is " << item.second << endl;//Show location and the updated Temperature 
         }
         this_thread::sleep_for(2000ms); //Put the thread in Sleep for 2 seconds
     }

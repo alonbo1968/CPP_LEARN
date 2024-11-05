@@ -52,7 +52,7 @@ public:
 
 int main()
 {
-    std::cout << "---Copy Constructor, Shallow Copy and Deep Copy---\n";
+    std::cout << "---Copy Constructor, Shallow Copy and Deep Copy---" << std::endl;
     std::cout << "1. create 1st object numberA:" << std::endl;
     Number numberA(5);
     std::cout << " numberA.n = " << numberA.n << std::endl;
@@ -74,12 +74,12 @@ int main()
     std::cout << " Now the Non-Default Copy Constructor is executed, instead of Regular Constructor." << std::endl;
     std::cout << " bookB.book_id = " << bookB.book_id << std::endl;
 
-    std::cout << "4. Examples above show what is a Copy Constructor. here it creates a \"Shallow Copy\" of the object data." << std::endl;
-    std::cout << "   But it's main usage is with \"Deep Copy\", required when the class has a dynamicly allocated data!" << std::endl;
+    std::cout << "4. Examples Copy Constructor: Here it creates a \"Deep Copy\" of the object data." << std::endl;
+    std::cout << " \"Deep Copy\", is required when the class has a dynamicly allocated data!" << std::endl;
     std::cout << " Create and initialize first House object with regular Constructor:" << std::endl;
     House houseA(150);
     std::cout << " houseA size is : " << houseA.get() << " square meters" << std::endl;
-    std::cout << " Create and initialize second House object with Deep copy Copy Constructor:" << std::endl;
+    std::cout << " Create and initialize second House object with Deep Copy Constructor:" << std::endl;
     House houseB = houseA;
     std::cout << " houseB size is : " << houseB.get() << " square meters" << std::endl;
     std::cout << " Change second object data and verify the first is not changed:" << std::endl;
