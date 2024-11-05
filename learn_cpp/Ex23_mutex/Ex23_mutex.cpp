@@ -12,6 +12,7 @@ using namespace std;
 mutex bike_mutex;
 
 void common_func(std::string rider) {
+    //bike_mutex.lock();//Lock Mutex. You can use "lock_guard" instead
     //unique_lock<mutex> bike_lock(bike_mutex); //Lock Mutex. You can use "lock_guard" instead
     lock_guard<mutex> bike_lock(bike_mutex); //Lock Mutex
     // Critical section start
@@ -20,6 +21,7 @@ void common_func(std::string rider) {
     std::this_thread::sleep_for(chrono::seconds(2));
     std::cout << rider << " is finished riding" << std::endl;
     // Critical section end
+    //bike_mutex.unlock();//Unlock Mutex not necessary when "lock_guard" is used
     //bike_lock.unlock();//Unlock Mutex not necessary when "lock_guard" is used
 }
 
