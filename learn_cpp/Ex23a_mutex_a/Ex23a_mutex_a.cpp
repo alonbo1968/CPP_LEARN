@@ -19,9 +19,11 @@ void increase_count(int thread_num) {
 
 void increase_count_with_mutex(int thread_num) {
     for (int i = 0; i < MAX_COUNT; i++) {
-        mtx.lock();//lock mutex before critical section
+        //mtx.lock();//lock mutex before critical section
+        std::lock_guard<std::mutex> lock(mtx);
         counter = counter + 1;
-        mtx.unlock();//release mutex after critical section
+        //mtx.unlock();//release mutex after critical section
+        
         //std::cout << thread_num;
     }
 }
@@ -36,7 +38,7 @@ int main()
     thread2.join();
     std::cout << "counter without using a mutes = " << counter << std::endl;
     if (counter < (2 * MAX_COUNT)) {
-        std::cout << "counter did not reach the expected value." << std::endl;
+        std::cout << "counter did not reach the expected value due to race condition." << std::endl;
     }
     else {
         std::cout << "counter reached expected value!" << std::endl;
@@ -51,7 +53,7 @@ int main()
     thread4.join();
     std::cout << "counter WITH MUTEX = " << counter << std::endl;
     if (counter < (2 * MAX_COUNT)) {
-        std::cout << "counter did not reach the expected value." << std::endl;
+        std::cout << "counter did not reach the expected value due to race condition" << std::endl;
     }
     else {
         std::cout << "counter reached expected value!" << std::endl;
